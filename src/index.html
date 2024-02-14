@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Why I Love You</title>
+  <link rel="stylesheet" href="./output.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <link rel="manifest" href="./assets/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="p-4 bg-gradient-to-r from-violet-800 to-fuchsia-500">
+  <header class="py-4 flex flex-col gap-8">
+    <h1 class="text-5xl handwriting flex flex-wrap gap-5 justify-center text-white drop-shadow-lg">
+      <div>All the Reasons</div>
+      <div>Why I Love You</div>
+    </h1>
+    <div class="text-white text-center">select a role to reveal specific reasons</div>
+  </header>
+  <main class="py-12 flex flex-col max-w-5xl mx-auto relative items-center">
+    <div id="categories-container" class="flex flex-wrap gap-8 justify-center"></div>
+    <template id="category-template">
+      <h2
+        class="w-40 h-40 flex flex-col items-center justify-center bg-yellow-100 rounded-full cursor-pointer shadow-md shadow-gray-800">
+        <div class="text-sm">You're an AMAZING</div>
+        <div class="text-3xl capitalize handwriting text-red-800"></div>
+        <div class="text-sm pt-1"></div>
+      </h2>
+    </template>
+    <div id="reasons-modal"
+      class="p-8 flex flex-col max-w-2xl bg-yellow-100 rounded-md shadow-md shadow-gray-800 absolute invisible">
+      <div class="flex justify-center pb-4">
+        <h2 class="flex font-bold text-xl items-center">
+          <div id="reasons-modal-category" class="text-3xl capitalize handwriting px-1 text-red-800"></div>
+        </h2>
+        <button type="button" onClick="closeModal()" class="absolute top-4 right-4">
+          <img height="24" width="24" src="./assets/close-x.svg" alt="Close modal" />
+        </button>
+      </div>
+      <ul id="reasons-modal-list" class="px-4 list-disc [&>li]:py-2 [&>li]:leading-normal"></ul>
+    </div>
+  </main>
+  <script src="./index.js"></script>
+</body>
+
+</html>

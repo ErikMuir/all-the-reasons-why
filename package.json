@@ -1,0 +1,17 @@
+{
+  "name": "all-the-reasons-why",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css",
+    "build:watch": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "deploy": "./deploy.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
