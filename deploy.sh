@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "Deploying static web site..."
+npm run build
+echo "Deploying..."
 aws s3 sync ./src s3://allthereasonswhyiloveyou.com
 echo "Done."
